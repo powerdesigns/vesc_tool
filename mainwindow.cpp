@@ -201,7 +201,7 @@ MainWindow::MainWindow(QWidget *parent) :
             ui->pageList->item(mPageNameIdList.value("app_ppm"))->setHidden
                     (!(type == 1 || type == 4 || type == 8));
             ui->pageList->item(mPageNameIdList.value("app_adc"))->setHidden
-                    (!(type == 2 || type == 5 || type == 8 || type == 11));
+                    (!(type == 2 || type == 5 || type == 8 || type == 11 || type == 12));
             ui->pageList->item(mPageNameIdList.value("app_uart"))->setHidden
                     (!(type == 3 || type == 4 || type == 5 || type == 8));
             ui->pageList->item(mPageNameIdList.value("app_vescremote"))->setHidden
@@ -209,7 +209,7 @@ MainWindow::MainWindow(QWidget *parent) :
             ui->pageList->item(mPageNameIdList.value("app_balance"))->setHidden
                     (!(type == 8 || type == 9));
             ui->pageList->item(mPageNameIdList.value("app_pas"))->setHidden
-                    (!(type == 10 || type == 11));
+                    (!(type == 10 || type == 11 || type == 12));
         }
     };
 
