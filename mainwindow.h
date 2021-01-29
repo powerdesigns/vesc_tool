@@ -54,6 +54,7 @@
 #include "pages/pageappnrf.h"
 #include "pages/pageappbalance.h"
 #include "pages/pageapppas.h"
+#include "pages/pageappluna.h"
 #include "pages/pagesettings.h"
 #include "pages/pagegpd.h"
 #include "pages/pageexperiments.h"
@@ -191,6 +192,7 @@ private:
     PageAppNrf *mPageAppNrf;
     PageAppBalance *mPageAppBalance;
     PageAppPas *mPageAppPas;
+    PageAppLuna *mPageAppLuna;
     PageSettings *mPageSettings;
     PageSwdProg *mPageSwdProg;
     PageAppImu *mPageAppImu;

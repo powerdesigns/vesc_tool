@@ -2755,6 +2755,25 @@ p, li { white-space: pre-wrap; }
             <suffix> Hz</suffix>
             <vTx>3</vTx>
         </app_pas_conf.update_rate_hz>
+        <app_luna_conf.display_type>
+            <longName>Display Type</longName>
+            <type>4</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto'; font-weight:600;&quot;&gt;Serial&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto';&quot;&gt;Selects serial display&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Roboto';&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto'; font-weight:600;&quot;&gt;CAN Bus&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto';&quot;&gt;Selects CAN Bus display&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Roboto';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>APPCONF_LUNA_DISPLAY_TYPE</cDefine>
+            <valInt>0</valInt>
+            <enumNames>Serial</enumNames>
+            <enumNames>CAN Bus</enumNames>
+        </app_luna_conf.display_type>
         <imu_conf.type>
             <longName>IMU Type</longName>
             <type>4</type>
@@ -3312,6 +3331,7 @@ p, li { white-space: pre-wrap; }
         <ser>app_pas_conf.ramp_time_pos</ser>
         <ser>app_pas_conf.ramp_time_neg</ser>
         <ser>app_pas_conf.update_rate_hz</ser>
+        <ser>app_luna_conf.display_type</ser>
         <ser>imu_conf.type</ser>
         <ser>imu_conf.mode</ser>
         <ser>imu_conf.sample_rate_hz</ser>
@@ -3624,6 +3644,15 @@ p, li { white-space: pre-wrap; }
                     <param>app_pas_conf.ramp_time_pos</param>
                     <param>app_pas_conf.ramp_time_neg</param>
                     <param>app_pas_conf.update_rate_hz</param>
+                </subgroupParams>
+            </subgroup>
+        </group>
+        <group>
+            <groupName>LUNA</groupName>
+            <subgroup>
+                <subgroupName>General</subgroupName>
+                <subgroupParams>
+                    <param>app_luna_conf.display_type</param>
                 </subgroupParams>
             </subgroup>
         </group>

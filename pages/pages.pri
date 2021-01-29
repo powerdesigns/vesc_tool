@@ -1,5 +1,6 @@
 FORMS += \
     $$PWD/pageappbalance.ui \
+    $$PWD/pageappluna.ui \
     $$PWD/pageapppas.ui \
     $$PWD/pagebms.ui \
     $$PWD/pagecananalyzer.ui \
@@ -37,6 +38,7 @@ FORMS += \
 
 HEADERS += \
     $$PWD/pageappbalance.h \
+    $$PWD/pageappluna.h \
     $$PWD/pageapppas.h \
     $$PWD/pagebms.h \
     $$PWD/pagecananalyzer.h \
@@ -74,6 +76,7 @@ HEADERS += \
 
 SOURCES += \
     $$PWD/pageappbalance.cpp \
+    $$PWD/pageappluna.cpp \
     $$PWD/pageapppas.cpp \
     $$PWD/pagebms.cpp \
     $$PWD/pagecananalyzer.cpp \

@@ -210,6 +210,8 @@ MainWindow::MainWindow(QWidget *parent) :
                     (!(type == 8 || type == 9));
             ui->pageList->item(mPageNameIdList.value("app_pas"))->setHidden
                     (!(type == 10 || type == 11 || type == 12));
+            ui->pageList->item(mPageNameIdList.value("app_luna"))->setHidden
+                    (!(type == 12));
         }
     };
 
@@ -242,6 +244,7 @@ MainWindow::MainWindow(QWidget *parent) :
             ui->pageList->item(mPageNameIdList.value("app_nrf"))->setHidden(false);
             ui->pageList->item(mPageNameIdList.value("app_balance"))->setHidden(false);
             ui->pageList->item(mPageNameIdList.value("app_pas"))->setHidden(false);
+            ui->pageList->item(mPageNameIdList.value("app_luna"))->setHidden(false);
             ui->pageList->item(mPageNameIdList.value("app_imu"))->setHidden(false);
             ui->pageList->item(mPageNameIdList.value("data_rt"))->setHidden(false);
             ui->pageList->item(mPageNameIdList.value("data_sampled"))->setHidden(false);
@@ -269,6 +272,7 @@ MainWindow::MainWindow(QWidget *parent) :
             ui->pageList->item(mPageNameIdList.value("app_nrf"))->setHidden(true);
             ui->pageList->item(mPageNameIdList.value("app_balance"))->setHidden(true);
             ui->pageList->item(mPageNameIdList.value("app_pas"))->setHidden(true);
+            ui->pageList->item(mPageNameIdList.value("app_luna"))->setHidden(true);
             ui->pageList->item(mPageNameIdList.value("app_imu"))->setHidden(true);
 //            ui->pageList->item(mPageNameIdList.value("data_rt"))->setHidden(true);
             ui->pageList->item(mPageNameIdList.value("data_sampled"))->setHidden(true);
@@ -298,6 +302,7 @@ MainWindow::MainWindow(QWidget *parent) :
         mPageAppNrf->reloadParams();
         mPageAppBalance->reloadParams();
         mPageAppPas->reloadParams();
+        mPageAppLuna->reloadParams();
         mPageAppImu->reloadParams();
         mPageFirmware->reloadParams();
         mPageCanAnalyzer->reloadParams();
@@ -1235,6 +1240,13 @@ void MainWindow::reloadPages()
     addPageItem(tr("PAS"), "://res/icons/icons8-fantasy-96.png",
                 "://res/icons/appconf.png", false, true);
     mPageNameIdList.insert("app_pas", ui->pageList->count() - 1);
+
+    mPageAppLuna = new PageAppLuna(this);
+    mPageAppLuna->setVesc(mVesc);
+    ui->pageWidget->addWidget(mPageAppLuna);
+    addPageItem(tr("LUNA"), "://res/icons/luna-icon-96.png",
+                "://res/icons/appconf.png", false, true);
+    mPageNameIdList.insert("app_luna", ui->pageList->count() - 1);
 
     mPageAppImu = new PageAppImu(this);
     mPageAppImu->setVesc(mVesc);
